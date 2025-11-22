@@ -92,7 +92,7 @@ body {
 
 .tall-cell {
 border-radius: 50px;
-  min-height: 550px;
+  min-height: 1000px;
   padding: 40px 0;
   background-color: transparent; /* transparent box */
   border-top: 2px solid rgba(255, 255, 255, 0.2);
