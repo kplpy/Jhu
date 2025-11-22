@@ -1,0 +1,113 @@
+/* styles.css - put this file in css/styles.css */
+
+/* Basic page body */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar appearance (default Bootstrap with small tweaks) */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Ensure navbar-brand is aligned left (Bootstrap default) */
+.navbar-brand {
+  font-weight: 600;
+}
+
+/* MOBILE: Make the collapsed menu visually distinct and full width */
+@media (max-width: 767px) {
+  /* Make the collapse area take the full width of viewport */
+  .navbar .navbar-collapse {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* Full-width dropdown list styling */
+  .mobile-nav-fullwidth {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe8d6; /* distinct background for menu */
+    border-top: 1px solid #e6cbb7;
+  }
+
+  /* Each item should take full available width and be centered */
+  .mobile-nav-fullwidth > li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .mobile-nav-fullwidth > li > a {
+    display: block;
+    width: 100%;
+    padding: 16px 12px;
+    font-size: 18px;
+    text-align: center; /* center labels using Bootstrap utility + CSS fallback */
+    text-decoration: none;
+  }
+
+  /* Slight hover/active feedback */
+  .mobile-nav-fullwidth > li > a:active,
+  .mobile-nav-fullwidth > li > a:hover {
+    background-color: rgba(0,0,0,0.03);
+  }
+}
+
+/* For larger screens hide the mobile collapse element entirely (we used visible-xs in HTML,
+   but this enforces it if needed) */
+@media (min-width: 768px) {
+  .navbar .visible-xs {
+    display: none !important;
+  }
+}
+
+/* Page heading spacing */
+.page-heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Tall section styles */
+.menu-section {
+  background-color: #ffffff;
+  padding: 20px 0;
+}
+
+/* The tall cell ensures the section is tall enough to force scrolling */
+.tall-cell {
+  min-height: 1000px; /* tall enough to require scroll */
+  padding: 40px 0;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* Center content inside the tall cell and add max-width for readability */
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Small responsive tweaks for typography */
+@media (max-width: 480px) {
+  .page-heading {
+    font-size: 28px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .mobile-nav-fullwidth > li > a {
+    font-size: 16px;
+    padding: 14px 10px;
+  }
+}
