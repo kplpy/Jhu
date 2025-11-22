@@ -1,45 +1,57 @@
 /* Basic body */
 body {
   font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: #000; /* BLACK BACKGROUND */
+  color: #fff; /* default text white */
   margin: 0;
   padding: 0;
 }
 
-
 /* NAVBAR */
 .navbar {
+  margin-top: 15px;
   margin-bottom: 0;
-  border-radius: 0;
-  background-color: #fffbf5;   /* light cream */
-  border-bottom: 2px solid #e8d8c8;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* transparent black */
+  border-style: none;
+  box-shadow: 0px 0px 20px gold;
+  backdrop-filter: blur(6px); /* soft transparency effect */
 }
 
 .navbar-brand {
   font-weight: 700;
-  color: #d35400 !important;   /* warm orange */
+  color: #d4af37 !important;  /* GOLD */
   font-size: 22px;
 }
 
 .navbar-brand:hover {
-  color: #e67e22 !important;
+  color: #f1d172 !important; /* lighter gold */
+}
+
+/* NAVBAR LINKS (desktop) */
+.navbar-nav > li > a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.navbar-nav > li > a:hover {
+  color: #d4af37 !important; /* gold hover */
 }
 
 /* MOBILE DROPDOWN */
 @media (max-width: 767px) {
 
-  /* Full-width dropdown menu background */
   .mobile-nav-fullwidth {
-    background-color: #fff2e6;  /* light orange-cream */
-    border-top: 2px solid #ffd1a6;
+    background-color: rgba(0, 0, 0, 0.85); /* transparent dark */
+    border-top: 2px solid #555;
     margin: 0;
     padding: 0;
+    backdrop-filter: blur(4px);
   }
 
   .mobile-nav-fullwidth > li {
     width: 100%;
-    border-bottom: 1px solid #ffd9b5;
+    border-bottom: 1px solid #666;
   }
 
   .mobile-nav-fullwidth > li > a {
@@ -48,17 +60,17 @@ body {
     padding: 16px 12px;
     font-size: 18px;
     text-align: center;
-    color: #c0392b;             /* deep red-orange */
+    color: #d4af37;  /* GOLD */
     font-weight: 600;
   }
 
   .mobile-nav-fullwidth > li > a:hover {
-    background-color: #ffe6cc;  /* soft highlight */
-    color: #e74c3c;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f1d172;
   }
 
   .mobile-nav-fullwidth > li > a:active {
-    background-color: #ffdab5;
+    background-color: rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -68,21 +80,25 @@ body {
   margin-bottom: 30px;
   font-size: 36px;
   font-weight: 700;
-  color: #c0392b;  /* matches menu text */
+  color: #d4af37;  /* GOLD */
+  text-shadow: 0 0 30px #d4af37;/* soft glow */
 }
 
-/* TALL SECTION */
+/* SECTION BACKGROUND */
 .menu-section {
-  background-color: #fff;
+  background-color: transparent;
   padding: 20px 0;
 }
 
 .tall-cell {
-  min-height: 1000px;
+border-radius: 50px;
+  min-height: 550px;
   padding: 40px 0;
-  background-color: #fff8f0;
-  border-top: 2px solid #ffe0c2;
-  border-bottom: 2px solid #ffe0c2;
+  background-color: transparent; /* transparent box */
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 50px #d4af37;
+  backdrop-filter: blur(4px);
 }
 
 .content-wrapper {
@@ -92,15 +108,17 @@ body {
 
 /* Text styling */
 h2 {
-  color: #d35400;
+  color: #d4af37;  /* GOLD */
   font-weight: 700;
   margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
 }
 
 p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 16px;
+  color: #fff; /* white paragraphs */
 }
 
 /* Small scrn tweaks */
